@@ -8,3 +8,4 @@ Don't get confused with `visibility: hidden;`.
     console.log($(this).is(":visible"));
 })`
 
+*This plugin is keep watching on Element for change in dom visibility*
