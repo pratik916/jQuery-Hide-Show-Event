@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/hideshow.min.js"></script>
+</head>
+<body>
+	<button type="button" id="toggle_visiblity"> Hide / Show div</button>
+	<div id="test_hidden" style="display: none;">
+		<h3>This div will fire hidden shown events.</h3>
+	</div>
+</body>
+<script type="text/javascript">
+
+	$(function(){
+		$("#toggle_visiblity").click(function(){
+			var visible = $("#test_hidden").is(":visible")
+			$("#test_hidden")[visible ? "hide" : "show"]();
+		})
+
+		// Or you can use this way.
+
+		/*$("#test_hidden").hideShow(function(e, visibility){
+			alert("Element " + visibility)
+		})*/
+
+		$("#test_hidden").hideShow().on("visibilityChanged", function(event, visibility){
+			alert("Element " + visibility)
+		})
+	})
+</script>
+</html>
