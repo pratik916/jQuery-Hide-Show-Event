@@ -28,7 +28,7 @@
 
 					elem.lastVisibility = curValue,
 
-					(callback) && (
+					(typeof callback === "function") && (
 						callback.apply(this, [new jQuery.Event('visibilityChanged'), curValue ? "shown" : "hidden"])
 					),
 					(function(elem, curValue, w){
