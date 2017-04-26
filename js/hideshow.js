@@ -46,4 +46,4 @@
 			})(this, arguments, w)
 		}
 	})
-})(jQuery, window)) || console.error("hideShow plugin requires jQuery")
+})(jQuery, window))) || console.error("hideShow plugin requires jQuery")
